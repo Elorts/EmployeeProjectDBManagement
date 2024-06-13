@@ -45,7 +45,6 @@ public class Project {
 
     @Override
     public String toString() {
-        return "Project [id=" + id + ", projectName=" + projectName
-                + ", technologyUsed=" + technologyUsed + "]";
+        return "Project [id=" + id + ", projectName=" + projectName + ", technologyUsed=" + technologyUsed + "]";
     }
 }
