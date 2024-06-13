@@ -28,6 +28,15 @@ public class EmployeeController {
         Employee employee = new Employee(entity.getName(), entity.getEmail(),
                 entity.getTechnicalSkill());
 
+        //***************************    MY CODE
+
+        Employee myEmployee = employeeRepository.getById(1);
+        System.out.println("***************** Email before changing: " + myEmployee.getEmail());
+        myEmployee.setEmail("burbuliukas");
+        System.out.println("***************** Email after changing: " + myEmployee.getEmail());
+        employeeRepository.save(myEmployee);
+        System.out.println("***************** Email saved");
+
         // save Employee
         employee = employeeRepository.save(employee);
         System.out.println("\nSaved employee :: " + employee + "\n");

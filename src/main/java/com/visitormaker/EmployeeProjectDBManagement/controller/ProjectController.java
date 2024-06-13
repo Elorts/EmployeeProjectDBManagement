@@ -38,12 +38,12 @@ public class ProjectController {
         System.out.println("\nCreate new Project and add existing Employees into this Project." + "\n");
 
         // get first Employee
-        int emplId = 7;
+        int emplId = 2;
         Employee employee1 = this.employeeRepository.getById(emplId);
         System.out.println("\nEmployee details :: " + employee1.toString() + "\n");
 
         // get first Employee
-        emplId = 9;
+        emplId = 5;
         Employee employee2 = this.employeeRepository.getById(emplId);
         System.out.println("\nEmployee details :: " + employee2.toString() + "\n");
 
@@ -51,9 +51,10 @@ public class ProjectController {
         Project project = new Project(entity.getProjectName(),
                 entity.getTechnologyUsed());
 
+
+
         // create Employee set
         Set<Employee> employees = new HashSet<>();
-        //Set&lt;Employee&gt; employees = new HashSetSet&lt;&gt;();
         employees.add(employee1);
         employees.add(employee2);
 
@@ -82,7 +83,6 @@ public class ProjectController {
 
         // create Employee set
         Set<Employee> employees = new HashSet<>();
-//        Set&lt;Employee&gt; employees = new HashSetSet&lt;&gt;();
         employees.add(employee);
 
         // assign Employee Set to Project
