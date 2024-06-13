@@ -40,9 +40,9 @@ public class EmployeeController {
                                            @PathVariable(name = "projId") String projId) {
         System.out.println("\nCreate a new Employee and assign to an existing Project." + "\n");
 
-                // create a new Employee
-                Employee employee = new Employee(entity.getName(), entity.getEmail(),
-                        entity.getTechnicalSkill());
+        // create a new Employee
+        Employee employee = new Employee(entity.getName(), entity.getEmail(),
+                entity.getTechnicalSkill());
 
         // save Employee
         employee = employeeRepository.save(employee);
@@ -54,7 +54,6 @@ public class EmployeeController {
 
         // create Employee set
         Set<Employee> employees = new HashSet<>();
-        //Set&lt;Employee&gt; employees = new HashSetSet&lt;&gt;();
         employees.add(employee);
 
         // assign Employee Set to Project
@@ -72,13 +71,13 @@ public class EmployeeController {
     public String assignEmployeeToProject(@PathVariable(name = "projId") Integer projId) {
         System.out.println("\nFetch existing Employee details and assign them to an existing Project." + "\n");
 
-                // get first Employee
+        // get first Employee
         int emplId = 1;
         Employee employee1 = this.employeeRepository.getById(emplId);
         System.out.println("\nEmployee details :: " + employee1.toString() + "\n");
 
         // get first Employee
-        emplId = 8;
+        emplId = 5;
         Employee employee2 = this.employeeRepository.getById(emplId);
         System.out.println("\nEmployee details :: " + employee2.toString() + "\n");
 
@@ -88,7 +87,6 @@ public class EmployeeController {
 
         // create Employee set
         Set<Employee> employees = new HashSet<>();
-        //Set&lt;Employee&gt; employees = new HashSetSet&lt;&gt;();
         employees.add(employee1);
         employees.add(employee2);
 
