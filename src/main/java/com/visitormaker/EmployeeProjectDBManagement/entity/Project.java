@@ -19,9 +19,10 @@ public class Project {
     @Column(name = "technologyUsed")
     private String technologyUsed;
 
+    // @ManyToMany(mappedBy = "projects")
+
     @ManyToMany(fetch = FetchType.LAZY, cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH })
-    @JoinTable(name = "EMPLOYEE_PROJECT_MAPPING", joinColumns = @JoinColumn(name = "project_id"),
-            inverseJoinColumns = @JoinColumn(name = "employee_id"))
+    @JoinTable(name = "EMPLOYEE_PROJECT_MAPPING", joinColumns = @JoinColumn(name = "project_id"), inverseJoinColumns = @JoinColumn(name = "employee_id"))
     private Set<Employee> employees;
 
     public Project() {}

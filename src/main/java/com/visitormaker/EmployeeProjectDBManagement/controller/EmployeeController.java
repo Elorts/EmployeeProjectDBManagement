@@ -81,14 +81,14 @@ public class EmployeeController {
         System.out.println("\nFetch existing Employee details and assign them to an existing Project." + "\n");
 
         // get first Employee
-        int emplId = 1;
+        int emplId = 152;
         Employee employee1 = this.employeeRepository.getById(emplId);
         System.out.println("\nEmployee details :: " + employee1.toString() + "\n");
 
         // get first Employee
-        emplId = 5;
-        Employee employee2 = this.employeeRepository.getById(emplId);
-        System.out.println("\nEmployee details :: " + employee2.toString() + "\n");
+//        emplId = 2;
+//        Employee employee2 = this.employeeRepository.getById(emplId);
+//        System.out.println("\nEmployee details :: " + employee2.toString() + "\n");
 
         // get a Project
         Project project = this.projectRepository.getById(projId);
@@ -97,7 +97,7 @@ public class EmployeeController {
         // create Employee set
         Set<Employee> employees = new HashSet<>();
         employees.add(employee1);
-        employees.add(employee2);
+        //employees.add(employee2);
 
         // assign Employee Set to Project
         project.setEmployees(employees);
