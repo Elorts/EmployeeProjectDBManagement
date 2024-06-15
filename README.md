@@ -1,2 +1,2 @@
 # EmployeeProjectDBManagement
- Java, Spring, SQL
+ Java, Spring, Hibernate, Jason, SQL
